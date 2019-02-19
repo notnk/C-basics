@@ -27,6 +27,6 @@ void main()
 				printf("%f is the area.",3.14*x*x);
 		}
 		printf("\nDo you want to continue(y/n)???");
-		scanf("%c",&ch);
+		scanf("%s",&ch);
 	}while(ch=='y' || ch=='Y');
 }
