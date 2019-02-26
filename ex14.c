@@ -3,7 +3,7 @@
 #define size 1000
 void main()
 {
-	int a[size],n,temp,test;
+	int a[size],n;
 	printf("Enter the size of the array:");
 	scanf("%d",&n);
 	for(int i=0;i<n;i++)
