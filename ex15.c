@@ -20,7 +20,11 @@ void main()
 			break;
 		case 2:	printf("Enter the index of element:");
 			scanf("%d",&c);
-			a[c]=0;
+			for(int i=c;i<n+1;i++)
+			{
+				a[i]=a[i+1];
+			}
+			n--;
 	}
 	for(int i=0;i<n;i++)
 	{
