@@ -21,6 +21,7 @@ void main()
 				a[i+1]=a[i];
 			}
 			a[c]=b;
+			n++;
 			break;
 		case 2:	printf("Enter the index of element:");
 			scanf("%d",&c);
