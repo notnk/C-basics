@@ -16,6 +16,10 @@ void main()
 	{
 		case 1:	printf("Enter the index and element:");
 			scanf("%d %d",&c,&b);
+			for(int i=n;i>=c;--i)
+			{
+				a[i+1]=a[i];
+			}
 			a[c]=b;
 			break;
 		case 2:	printf("Enter the index of element:");
