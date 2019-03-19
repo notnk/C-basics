@@ -1,10 +1,10 @@
 #include<stdio.h>
 void main()
 {
-	int a[100][100],b[100][100],r,c;
+	int a[100][100],d=0,r,c,rs=0,cs=0,ch,x;
 	printf("Enter the no of rows and columns:");
 	scanf("%d%d",&r,&c);
-	printf("Enter the elements of 1st array.");	
+	printf("Enter the elements of array.");	
 	for(int i=0;i<r;i++)
 	{
 		for(int j=0;j<c;j++)
@@ -12,29 +12,48 @@ void main()
 			scanf("%d",&a[i][j]);
 		}
 	}
-	printf("Enter the elements of 2nd array.");	
 	for(int i=0;i<r;i++)
 	{
+		printf("\n");	
 		for(int j=0;j<c;j++)
 		{
-			scanf("%d",&b[i][j]);
+			printf("%d\t",a[i][j]);
 		}
 	}
-	int d[r][c];
-	printf("The sum of a+b is \n");	
-	for(int i=0;i<r;i++)
+	printf("\n1.Row sum\n2.Column sum\n3.Diagonals sum\nEnter the option:");
+	scanf("%d",&ch);
+	if(ch==3)
 	{
-		for(int j=0;j<c;j++)
+		for(int i=0;i<r;i++)
 		{
-			d[i][j]=a[i][j]+b[i][j];
+			for(int j=0;j<c;j++)
+			{
+				if(i==j)
+				{
+					d+=a[i][j];
+				}
+			}
 		}
+		printf("\nThe diagonals sum is %d",d);		
 	}
-	for(int i=0;i<r;i++)
+	else if(ch==1)
 	{
-		printf("\n");
-		for(int j=0;j<c;j++)
+		printf("Enter the row.");
+		scanf("%d",&x);
+		for(int i=0;i<c;i++)
 		{
-			printf("%d  ",d[i][j]);
+			rs+=a[x-1][i];
 		}
+		printf("The required sum is %d",rs);
+	}
+	else
+	{
+		printf("Enter the column.");
+		scanf("%d",&x);
+		for(int i=0;i<r;i++)
+		{
+			cs+=a[i][x-1];
+		}
+		printf("The required sum is %d",cs);
 	}
 }
