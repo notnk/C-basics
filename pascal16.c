@@ -14,7 +14,7 @@ void main()
                 		coef = 1;
 			else
 		                coef = coef*(i-j+1)/j;
-
+		}
             	printf("%4d", coef);
         }
         printf("\n");
