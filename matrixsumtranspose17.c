@@ -20,7 +20,7 @@ void main()
 			printf("%d\t",a[i][j]);
 		}
 	}
-	printf("\n1.Row sum\n2.Column sum\n3.Diagonals sum\nEnter the option:");
+	printf("\n1.Row sum\n2.Column sum\n3.Diagonals sum\n4.Tranpose\nEnter the option:");
 	scanf("%d",&ch);
 	if(ch==3)
 	{
@@ -46,7 +46,7 @@ void main()
 		}
 		printf("The required sum is %d",rs);
 	}
-	else
+	else if(ch==2)
 	{
 		printf("Enter the column.");
 		scanf("%d",&x);
@@ -56,4 +56,26 @@ void main()
 		}
 		printf("The required sum is %d",cs);
 	}
+	else
+	{	
+		int t[r][c];
+		for(int i=0;i<r;i++)
+		{
+			for(int j=0;j<c;j++)
+			{
+				t[i][j]=a[j][i];
+			}
+		}
+		printf("The transpose is \n");
+		for(int i=0;i<r;i++)
+		{	
+			printf("\n");			
+			for(int j=0;j<c;j++)
+			{ 
+ 				printf("%d\t",t[i][j]);
+
+			}
+		}
+
+	}	
 }
