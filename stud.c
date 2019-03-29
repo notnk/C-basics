@@ -12,6 +12,7 @@ void main()
 	scanf("%d",&n);
 	for(int i=0;i<n;i++)
 	{
+		t[i]=0;
 		printf("Enter the name of the %dth student:",i+1);
 		scanf("%s",s[i].name);
 		printf("Enter the 5 marks of the %dth student:",i+1);
