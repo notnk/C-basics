@@ -1,0 +1,8 @@
+Movie code	Name			Day		Cost	Time
+----------      ----			---		----	----
+01		jumanji 		20jan		300	16:00
+36		BatmanVsSuperman	12jan		350 	21:00
+37		antman			15feb		350 	22:00
+38		deadpool		15mar		350 	12:00
+3636		Thor			3nov		300 	10:00
+9600		Avenger			15apr		350 	09:00
